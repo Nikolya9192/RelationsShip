@@ -157,7 +157,7 @@ namespace RelationsShip
 
             //////////////////// Book Configurations
             modelBuilder.Entity<Book>().HasKey(o => o.Id);
-            modelBuilder.Entity<Book>().Property(u => u.Name)
+            modelBuilder.Entity<Book>().Property(u => u.Title)
                                                 .IsRequired()
                                                 .HasMaxLength(150);
             // Relationship: Many to Many
@@ -177,8 +177,8 @@ namespace RelationsShip
                 new Book()
                 {
                     Id = 1,
-                    Name = "Heart's Three Persons",
-                    AuthorId = 2, // new Author { Id = 1},
+                    Title = "Heart's Three Persons",
+                    AuthorId = 1, 
                     CountPage = 152,
                     Year = 1986,
                     GenreId = 1 
@@ -187,41 +187,50 @@ namespace RelationsShip
                 new Book()
                 {
                     Id = 2,
-                    Name = "Poetry",
-                    AuthorId = 2, //new Author { Id = 2},
+                    Title = "Poetry",
+                    AuthorId = 2, 
                     CountPage = 102,
                     Year = 1982,
-                    GenreId = 2 // new Genre { Id = 2 }
+                    GenreId = 2 
                 },
 
                 new Book()
                 {
                     Id = 3,
-                    Name = "Fathers and Children",
-                    AuthorId = 3, // new Author  { Id = 3 },
+                    Title = "Fathers and Children",
+                    AuthorId = 3,
                     CountPage = 425,
                     Year = 1971,
-                    GenreId = 3 //new Genre { Id = 3 }
+                    GenreId = 3 
                 },
 
                 new Book()
                 {
                     Id = 4,
-                    Name = "Fox Mykyta",
-                    AuthorId = 4, //new Author { Id = 4 },
+                    Title = "Fox Mykyta",
+                    AuthorId = 4, 
                     CountPage = 25,
                     Year = 1988,
-                    GenreId = 3 //new Genre { Id = 3 }
+                    GenreId = 3 
                 },
 
                  new Book()
                 {
                     Id = 5,
-                    Name = "Erqule Puaro",
-                    AuthorId = 5,//new Author { Id = 5 },
+                    Title = "Erqule Puaro",
+                    AuthorId = 5,
                     CountPage = 85,
                     Year = 1975,
-                    GenreId = 1 //new Genre { Id = 1 }
+                    GenreId = 1 
+                },
+                 new Book()
+                {
+                    Id = 6,
+                    Title = "Town with Ghosts",
+                    AuthorId = 1, 
+                    CountPage = 202,
+                    Year = 1980,
+                    GenreId = 1
                 }
 
             });

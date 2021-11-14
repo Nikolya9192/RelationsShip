@@ -13,6 +13,6 @@ namespace RelationsShip
         public string LastName { get; set; }   
         public int CountryId { get; set; }
         public Country Country { get; set; }
-        public ICollection<Book> Books { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
     }
 }

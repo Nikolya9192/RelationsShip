@@ -16,7 +16,7 @@ namespace RelationsShip
         public DateTime Date { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public ICollection<Book> Books { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
 
     }
 }
