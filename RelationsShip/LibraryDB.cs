@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RelationsShip
 {
-    class LibraryDB : DbContext
+    public class LibraryDB : DbContext
     {
 
         public LibraryDB()
